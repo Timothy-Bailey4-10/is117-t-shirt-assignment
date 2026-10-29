@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jersey Givers hero exploration B: a postmodernist direction after Martine Bedin's 1981 Super lamp for Memphis."
+    />
+    <title>Jersey Givers — hero exploration B (postmodernist)</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Work+Sans:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="postmodernist.css" />
+    <script src="postmodernist.js"></script>
+  </head>
+  <body class="pomo">
+    <nav class="pomo-note" aria-label="Exploration pages">
+      Exploration B · postmodernist · <a href="modernist.html">see A</a> ·
+      <a href="../index.html">storefront</a>
+    </nav>
+    <main class="pomo-hero" aria-labelledby="pomo-title">
+      <div class="pomo-stage">
+        <svg
+          class="pomo-base"
+          viewBox="0 0 600 340"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M20 330a280 280 0 0 1 560 0Z" fill="#1f3a9e" />
+          <circle cx="40" cy="190" r="26" fill="#e2492f" />
+          <circle cx="120" cy="80" r="26" fill="#b9d531" />
+          <circle cx="235" cy="22" r="22" fill="#f4cf2c" />
+          <circle cx="365" cy="22" r="22" fill="#9fd0ea" />
+          <circle cx="480" cy="80" r="26" fill="#3aa456" />
+          <circle cx="560" cy="190" r="26" fill="#f2a7b5" />
+        </svg>
+        <img
+          class="pomo-shirt"
+          src="../assets/white-shirt.svg"
+          alt="Plain white short-sleeved T-shirt"
+          width="800"
+          height="880"
+        />
+      </div>
+      <div class="pomo-copy">
+        <p class="pomo-name">Jersey Givers</p>
+        <h1 id="pomo-title">
+          <span class="pomo-h-a">Pull it on,</span>
+          <span class="pomo-h-b">join the cause.</span>
+        </h1>
+        <p class="pomo-support">
+          Jersey Givers is for New Jersey students who lend a hand to neighbors
+          who need a hand.
+        </p>
+        <form class="pomo-form" id="pomo-form" novalidate>
+          <fieldset aria-describedby="pomo-error">
+            <legend>Choose a size</legend>
+            <div class="pomo-sizes">
+              <label
+                ><input type="radio" name="size" value="S" /><span
+                  >S</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="size" value="M" /><span
+                  >M</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="size" value="L" /><span
+                  >L</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="size" value="XL" /><span
+                  >XL</span
+                ></label
+              >
+            </div>
+          </fieldset>
+          <button class="pomo-action" type="submit">Add to bag</button>
+          <p
+            class="pomo-status"
+            id="pomo-error"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

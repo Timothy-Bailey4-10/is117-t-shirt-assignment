@@ -1,0 +1,228 @@
+/* Exploration B only. Scoped to .pomo so it cannot change the storefront. */
+.pomo {
+  --pomo-cream: #fff6e3;
+  --pomo-ink: #1b1b1b;
+  --pomo-blue: #1f3a9e;
+  --pomo-pink: #f2a7b5;
+  --pomo-yellow: #f4cf2c;
+
+  margin: 0;
+  background-color: var(--pomo-cream);
+  background-image: radial-gradient(#1b1b1b 1.2px, transparent 1.3px);
+  background-size: 22px 22px;
+  color: var(--pomo-ink);
+  font-family: "Work Sans", system-ui, sans-serif;
+}
+
+.pomo-note {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: var(--pomo-ink);
+  color: var(--pomo-cream);
+  font-size: 0.85rem;
+}
+
+.pomo-note a {
+  color: inherit;
+}
+
+.pomo-hero {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  min-height: calc(100vh - 2.5rem);
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.pomo-stage {
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 18%;
+}
+
+.pomo-base {
+  width: 100%;
+  height: auto;
+}
+
+.pomo-shirt {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 62%;
+  height: auto;
+  border: 4px solid var(--pomo-ink);
+  box-shadow: 12px 12px 0 var(--pomo-pink);
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+.pomo-copy {
+  padding: 2rem;
+  border: 3px solid var(--pomo-ink);
+  background: var(--pomo-cream);
+  box-shadow: 10px 10px 0 var(--pomo-blue);
+}
+
+.pomo-name {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: 0.35rem 1rem;
+  background: var(--pomo-ink);
+  color: var(--pomo-cream);
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  letter-spacing: 0.04em;
+  transform: rotate(-2deg);
+}
+
+.pomo h1 {
+  margin: 0;
+  line-height: 1;
+}
+
+.pomo-h-a {
+  display: block;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 400;
+}
+
+.pomo-h-b {
+  display: inline-block;
+  margin-top: 0.3em;
+  padding: 0.05em 0.15em 0.1em;
+  background: var(--pomo-yellow);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.pomo-support {
+  margin: 1.5rem 0 2rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.pomo-action {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border: 3px solid var(--pomo-ink);
+  background: var(--pomo-blue);
+  color: #fff;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 6px 6px 0 var(--pomo-pink);
+}
+
+.pomo-action:hover {
+  box-shadow: 3px 3px 0 var(--pomo-pink);
+  transform: translate(3px, 3px);
+}
+
+.pomo-action:focus-visible {
+  outline: 3px solid var(--pomo-ink);
+  outline-offset: 5px;
+}
+
+.pomo-form fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 0;
+}
+
+.pomo-form legend {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.pomo-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pomo-sizes label {
+  position: relative;
+  cursor: pointer;
+}
+
+.pomo-sizes input {
+  position: absolute;
+  opacity: 0;
+}
+
+.pomo-sizes span {
+  display: grid;
+  place-items: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  border: 3px solid var(--pomo-ink);
+  background: #fff;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.pomo-sizes input:checked + span {
+  background: var(--pomo-yellow);
+  box-shadow: 4px 4px 0 var(--pomo-ink);
+}
+
+.pomo-sizes input:focus-visible + span {
+  outline: 3px solid var(--pomo-blue);
+  outline-offset: 3px;
+}
+
+.pomo-status {
+  min-height: 1.5em;
+  margin: 1rem 0 0;
+  font-weight: 600;
+}
+
+.pomo-status.is-error {
+  color: #a3261b;
+}
+
+@media (width <= 760px) {
+  .pomo-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 1.25rem 1.25rem 2.5rem;
+  }
+
+  .pomo-copy {
+    padding: 1.25rem;
+  }
+
+  .pomo-shirt {
+    width: 66%;
+  }
+}
+
+.pomo-js .pomo-shirt {
+  opacity: 0;
+  transform: translateX(-50%) translateY(1.5rem) rotate(-4deg);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+}
+
+.pomo-js.pomo-loaded .pomo-shirt {
+  opacity: 1;
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pomo-js .pomo-shirt {
+    opacity: 1;
+    transform: translateX(-50%) rotate(-4deg);
+    transition: none;
+  }
+
+  .pomo-action:hover {
+    transform: none;
+  }
+}
