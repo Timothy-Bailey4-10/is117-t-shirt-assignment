@@ -1,19 +1,27 @@
-/* Shared brand tokens. Change these after you agree on your brand direction.
+/* Jersey Givers brand tokens (BRAND-001, postmodern direction B).
    Both the storefront and the live style guide use this file. */
 :root {
-  --color-paper: #f6f5f0;
-  --color-ink: #171a18;
-  --color-muted: #5a615b;
-  --color-line: #d1d5cc;
-  --color-accent: #e3ef56;
-  --color-soft: #e8eae1;
+  --color-paper: #fff6e3;
+  --color-ink: #1b1b1b;
+  --color-muted: #4f4a42;
+  --color-line: #d9cdb4;
+  --color-accent: #f4cf2c;
+  --color-soft: #f6e9cc;
+  --color-blue: #1f3a9e;
+  --color-pink: #f2a7b5;
   --color-white: #fff;
-  --color-danger: #992e28;
-  --font-body:
-    system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
-  --font-display:
-    system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+  --color-danger: #a3261b;
+  --dot-red: #e2492f;
+  --dot-lime: #b9d531;
+  --dot-sky: #9fd0ea;
+  --dot-green: #3aa456;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-accent: "DM Serif Display", georgia, serif;
   --font-mono: ui-monospace, sfmono-regular, consolas, monospace;
+  --border: 3px solid var(--color-ink);
+  --shadow-blue: 10px 10px 0 var(--color-blue);
+  --shadow-pink: 6px 6px 0 var(--color-pink);
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -34,7 +42,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-paper);
+  background-color: var(--color-paper);
+  background-image: radial-gradient(var(--color-line) 1.3px, transparent 1.4px);
+  background-size: 22px 22px;
   color: var(--color-ink);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -101,25 +111,26 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 550;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 h1 {
   font-size: clamp(3.4rem, 6.25vw, 6.6rem);
   line-height: 0.99;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   font-size: clamp(2rem, 3.6vw, 3.75rem);
   line-height: 1.08;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.01em;
 }
 
 h3 {
   font-size: 1.3rem;
   line-height: 1.3;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 p + p {
@@ -185,9 +196,10 @@ p + p {
   align-items: center;
   gap: 1.5rem;
   padding: 0.8rem 3rem;
-  background: var(--color-accent);
+  background: var(--color-ink);
   font-size: 0.73rem;
   line-height: 1.5;
+  color: var(--color-paper);
 }
 
 .starter-notice a {
@@ -200,7 +212,8 @@ p + p {
   display: flex;
   align-items: center;
   gap: 3rem;
-  border-bottom: 1px solid var(--color-line);
+  border-bottom: var(--border);
+  background: var(--color-paper);
 }
 
 .brand-link {
@@ -209,7 +222,7 @@ p + p {
 }
 
 .wordmark {
-  width: 150px;
+  width: clamp(170px, 17vw, 230px);
   height: auto;
 }
 
@@ -225,11 +238,13 @@ p + p {
 .bag-link {
   text-decoration: none;
   font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .nav-link {
   padding-block: 0.5rem;
   border-bottom: 1px solid transparent;
+  border-bottom-width: 3px;
 }
 
 .nav-link:hover,
@@ -249,9 +264,11 @@ p + p {
   place-items: center;
   min-width: 1.7rem;
   height: 1.7rem;
-  border: 1px solid var(--color-ink);
+  border: 2px solid var(--color-ink);
   border-radius: 50%;
   font-size: 0.7rem;
+  background: var(--color-accent);
+  font-weight: 700;
 }
 
 .product-section {
@@ -259,7 +276,7 @@ p + p {
   grid-template-columns: 1.13fr 1fr;
   gap: clamp(3rem, 7vw, 8rem);
   padding-block: var(--space-5) 5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .product-visual {
@@ -395,18 +412,20 @@ legend {
   display: grid;
   place-items: center;
   min-height: 3.2rem;
-  border: 1px solid var(--color-line);
-  background: var(--color-paper);
-  font-size: 0.83rem;
+  border: var(--border);
+  background: var(--color-white);
+  font-size: 0.95rem;
   transition:
     background 150ms ease,
     border-color 150ms ease;
+  font-family: var(--font-display);
 }
 
 .size-option input:checked + span {
-  background: var(--color-ink);
+  background: var(--color-accent);
   border-color: var(--color-ink);
-  color: var(--color-paper);
+  color: var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
 }
 
 .size-option input:hover + span {
@@ -416,6 +435,7 @@ legend {
 .size-option input:focus-visible + span {
   outline: 3px solid var(--color-ink);
   outline-offset: 4px;
+  outline-color: var(--color-blue);
 }
 
 .size-option input:focus-visible {
@@ -435,15 +455,16 @@ legend {
   justify-content: space-between;
   gap: 2rem;
   min-height: 3.4rem;
-  border: 1px solid var(--color-ink);
+  border: var(--border);
   padding: 0.9rem 1.25rem;
-  font-size: 0.82rem;
-  font-weight: 550;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.4;
   text-decoration: none;
   transition:
     background 150ms ease,
     color 150ms ease;
+  font-family: var(--font-display);
 }
 
 .button > span[aria-hidden] {
@@ -452,22 +473,25 @@ legend {
 }
 
 .button-primary {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: var(--shadow-pink);
 }
 
 .button-primary:hover {
-  background: var(--color-accent);
-  color: var(--color-ink);
+  background: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: 3px 3px 0 var(--color-pink);
+  translate: 3px 3px;
 }
 
 .button-secondary {
-  background: transparent;
+  background: var(--color-white);
   color: var(--color-ink);
 }
 
 .button-secondary:hover {
-  background: var(--color-soft);
+  background: var(--color-accent);
 }
 
 .add-button {
@@ -511,7 +535,7 @@ legend {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  border-top: 1px solid var(--color-line);
+  border-top: var(--border);
   padding-block: 3rem;
 }
 
@@ -520,8 +544,33 @@ legend {
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
+.bag-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cart-icon {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: var(--color-blue);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-icon circle {
+  fill: var(--color-blue);
+  stroke: none;
+}
+
 .bag-details {
-  padding-top: 0.2rem;
+  padding: 1.25rem 1.5rem;
+  border: var(--border);
+  background: var(--color-accent);
+  box-shadow: 8px 8px 0 var(--color-blue);
   font-size: 0.85rem;
 }
 
@@ -541,8 +590,9 @@ legend {
 
 .bag-items li {
   padding-block: 0.55rem;
-  border-bottom: 1px solid var(--color-line);
-  font-size: 0.78rem;
+  border-bottom: 2px solid var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .text-button {
@@ -561,7 +611,8 @@ legend {
 
 .bag-details .field-help {
   margin-top: 0.4rem;
-  font-size: 0.69rem;
+  color: var(--color-ink);
+  font-size: 0.72rem;
 }
 
 .starter-next {
@@ -591,10 +642,10 @@ legend {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  border-top: 1px solid var(--color-line);
+  border-top: var(--border);
   padding-block: 1.6rem;
   font-size: 0.67rem;
-  color: var(--color-muted);
+  color: var(--color-ink);
 }
 
 .footer-tagline {
@@ -735,18 +786,20 @@ legend {
   place-items: center;
   padding: 3rem;
   background: var(--color-white);
-  border: 1px solid var(--color-line);
+  border: var(--border);
+  box-shadow: var(--shadow-blue);
 }
 
 .logo-board img {
-  width: min(100%, 380px);
+  width: min(100%, 460px);
 }
 
 .logo-variants {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--color-line);
+  border: var(--border);
   border-top: 0;
+  background: var(--color-white);
 }
 
 .logo-variant {
@@ -763,13 +816,13 @@ legend {
 }
 
 .logo-small {
-  width: 110px;
+  width: 170px;
   height: auto;
 }
 
 .logo-mono {
-  width: 190px;
-  filter: brightness(0);
+  width: 210px;
+  height: auto;
 }
 
 .logo-variant p,
@@ -785,13 +838,13 @@ legend {
 
 .palette-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 0.65rem;
 }
 
 .color-swatch {
   height: 120px;
-  border: 1px solid var(--color-line);
+  border: var(--border);
   background: var(--swatch-color);
 }
 
@@ -837,8 +890,8 @@ legend {
 .type-display {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 4.5vw, 5rem);
-  font-weight: 550;
-  letter-spacing: -0.075em;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 1;
   max-width: 700px;
 }
@@ -924,9 +977,10 @@ legend {
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  background: var(--color-soft);
+  background: var(--color-accent);
   padding: 1.5rem 2rem;
   margin-block: 2rem 4rem;
+  border: var(--border);
 }
 
 .guide-footer-note p {
@@ -1026,7 +1080,7 @@ legend {
   }
 
   .wordmark {
-    width: 130px;
+    width: 170px;
   }
 
   .main-nav {
@@ -1293,5 +1347,179 @@ legend {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* Jersey Givers brand layer: tilted cards, hard shadows, mixed type. */
+
+.accent-type {
+  display: inline-block;
+  margin-top: 0.25em;
+  padding: 0.05em 0.18em 0.1em;
+  background: var(--color-accent);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.shirt-stage {
+  position: relative;
+  padding: 1rem 0 40%;
+}
+
+.shirt-stage-base {
+  width: 100%;
+  height: auto;
+}
+
+.shirt-card {
+  position: absolute;
+  bottom: 0;
+  left: 19%;
+  width: 62%;
+  height: auto;
+  aspect-ratio: 800 / 880;
+  border: var(--border);
+  background: var(--color-soft);
+  box-shadow: 12px 12px 0 var(--color-pink);
+  rotate: -4deg;
+  animation: shirt-arrive 0.9s ease-out 0.3s both;
+}
+
+.product-card {
+  max-width: 560px;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border: var(--border);
+  background: var(--color-paper);
+  box-shadow: var(--shadow-blue);
+}
+
+.product-card h1 {
+  margin-top: 0;
+  font-size: clamp(2.4rem, 4.6vw, 3.9rem);
+  line-height: 1.02;
+}
+
+.product-card .accent-type {
+  font-size: 1.12em;
+}
+
+.product-card .product-intro {
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.product-card .price-row {
+  border-bottom: 2px dashed var(--color-ink);
+}
+
+.add-feedback {
+  min-height: 1.6em;
+  margin-top: 0.9rem;
+  font-weight: 600;
+}
+
+.add-feedback a {
+  margin-left: 0.4rem;
+}
+
+.unity-band {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem 3rem;
+  align-items: center;
+  margin-block: 1rem 3rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: var(--border);
+  background: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: 12px 12px 0 var(--color-accent);
+}
+
+.unity-band h2 {
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.unity-band .accent-type {
+  color: var(--color-ink);
+}
+
+.unity-lead {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.tip-card {
+  padding: 1.5rem;
+  border: var(--border);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  rotate: 1.5deg;
+}
+
+.tip-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.tip-card ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.tip-card p {
+  margin-top: 0.75rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.product-section .eyebrow,
+.bag-section .eyebrow {
+  font-weight: 700;
+}
+
+.type-accent {
+  font-family: var(--font-accent);
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  font-style: italic;
+  line-height: 1.1;
+}
+
+@keyframes shirt-arrive {
+  from {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (width <= 760px) {
+  .shirt-card {
+    left: 17%;
+    width: 66%;
+  }
+
+  .product-card h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .unity-band {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-card {
+    rotate: 0deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-primary:hover {
+    translate: none;
   }
 }
