@@ -11,6 +11,7 @@ test("negative: choosing no size explains the problem and keeps the bag empty", 
   await expect(page.locator("#size-error")).toBeVisible();
   await expect(page.locator("#size-error")).not.toBeEmpty();
   await expect(page.locator("#bag-count")).toHaveText("0");
+  await expect(page.locator("#add-feedback")).toBeHidden();
 });
 
 test("positive: a shopper can choose sizes, add items, and empty the demo bag", async ({
@@ -23,6 +24,9 @@ test("positive: a shopper can choose sizes, add items, and empty the demo bag", 
     .click();
   await expect(page.locator("#bag-count")).toHaveText("1");
   await expect(page.locator("#bag-status")).toContainText("M");
+  // The confirmation appears beside the button, not only in the bag below.
+  await expect(page.locator("#add-feedback")).toBeVisible();
+  await expect(page.locator("#add-feedback")).toContainText("Size M added");
   await page.locator('input[name="size"][value="L"]').check();
   await page
     .getByRole("button", { name: "Add to demo bag", exact: true })

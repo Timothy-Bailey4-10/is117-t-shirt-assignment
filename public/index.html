@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="An unfinished, neutral T-shirt storefront for the IS117 Brand Studio. Build a brand through deliberate, visible design choices."
+      content="Jersey Givers: a white T-shirt for New Jersey students who lend a hand to neighbors who need a hand. A class demo store."
     />
-    <title>Your Brand — neutral storefront starter</title>
+    <title>Jersey Givers — Pull it on, join the cause.</title>
     <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Work+Sans:wght@400;600;700&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="shop.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <aside class="starter-notice" aria-label="Starter information">
+    <aside class="starter-notice" aria-label="Demo store information">
       <span
-        ><strong>Unfinished by design.</strong> This is a neutral teaching
-        starter. Replace its identity after your brand decisions.</span
+        ><strong>Class demo store.</strong> Jersey Givers is a student brand
+        project. No real orders, payments, or accounts.</span
       >
       <a href="studio.html"
-        >Enter the studio <span aria-hidden="true">↗</span></a
+        >About the studio <span aria-hidden="true">↗</span></a
       >
     </aside>
     <header class="site-header wrap">
-      <a
-        class="brand-link"
-        href="index.html"
-        aria-label="Your Brand storefront home"
+      <a class="brand-link" href="index.html" aria-label="Jersey Givers home"
         ><img
           class="wordmark"
-          src="assets/wordmark.svg"
-          alt="Neutral starter wordmark"
-          width="175"
-          height="26"
+          src="assets/jersey-givers-logo.svg"
+          alt="Jersey Givers"
+          width="494"
+          height="110"
       /></a>
       <nav class="main-nav" aria-label="Main navigation">
         <a class="nav-link" href="index.html" aria-current="page">Shop</a>
@@ -49,34 +52,37 @@
 
     <main id="main">
       <section class="product-section wrap" aria-labelledby="product-title">
-        <div class="product-visual">
-          <div class="visual-label">
-            <span>001 / The starting point</span><span>Unbranded</span>
-          </div>
+        <div class="shirt-stage">
+          <svg
+            class="shirt-stage-base"
+            viewBox="0 0 600 340"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M20 330a280 280 0 0 1 560 0Z" fill="var(--color-blue)" />
+            <circle cx="40" cy="190" r="26" fill="var(--dot-red)" />
+            <circle cx="120" cy="80" r="26" fill="var(--dot-lime)" />
+            <circle cx="235" cy="22" r="22" fill="var(--color-accent)" />
+            <circle cx="365" cy="22" r="22" fill="var(--dot-sky)" />
+            <circle cx="480" cy="80" r="26" fill="var(--dot-green)" />
+            <circle cx="560" cy="190" r="26" fill="var(--color-pink)" />
+          </svg>
           <img
-            class="shirt-image"
+            class="shirt-card"
             src="assets/white-shirt.svg"
-            alt="Plain white, unbranded short-sleeved T-shirt"
+            alt="Plain white short-sleeved T-shirt"
             width="800"
             height="880"
             fetchpriority="high"
           />
-          <div class="image-caption">
-            <span>One product. Room for your point of view.</span
-            ><span aria-hidden="true">↙</span>
-          </div>
         </div>
-        <div class="product-information">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Neutral product
-            / demo only
-          </p>
-          <h1 id="product-title">The white<br />T-shirt.</h1>
-          <p class="product-intro">A plain shirt. A place to begin.</p>
-          <p class="muted product-description">
-            This starter has a working product page and room for a brand. Its
-            audience, personality, message, and visual direction are still yours
-            to decide.
+        <div class="product-card">
+          <h1 id="product-title">
+            Pull it on,<br /><span class="accent-type">join the cause.</span>
+          </h1>
+          <p class="product-intro">
+            Jersey Givers is for students who lend a hand to the neighbors who
+            need it most.
           </p>
           <div class="price-row">
             <p class="price">$28 <span>USD</span></p>
@@ -117,6 +123,7 @@
             <button class="button button-primary add-button" type="submit">
               Add to demo bag <span aria-hidden="true">↗</span>
             </button>
+            <p id="add-feedback" class="add-feedback" hidden></p>
           </form>
           <p class="demo-disclaimer">
             A classroom interaction, using fictional product data. No order,
@@ -124,12 +131,8 @@
           </p>
           <dl class="product-facts">
             <div>
-              <dt>Color</dt>
-              <dd>White</dd>
-            </div>
-            <div>
-              <dt>Brand identity</dt>
-              <dd>Not decided yet</dd>
+              <dt>Made for</dt>
+              <dd>New Jersey student volunteers</dd>
             </div>
             <div>
               <dt>Product claims</dt>
@@ -139,14 +142,47 @@
         </div>
       </section>
 
+      <section class="unity-band wrap" aria-labelledby="unity-title">
+        <div>
+          <h2 id="unity-title">
+            From Jersey,<br /><span class="accent-type">for Jersey.</span>
+          </h2>
+          <p class="unity-lead">
+            For students who show up for their neighbors.
+          </p>
+        </div>
+        <aside class="tip-card" aria-labelledby="tip-title">
+          <h3 id="tip-title">First shift? Do this.</h3>
+          <ul>
+            <li>Bring gloves and a water bottle.</li>
+            <li>Wear closed-toe shoes.</li>
+            <li>Arrive a few minutes early to meet the crew.</li>
+          </ul>
+          <p>General advice:<br />Check what your event organizer asks for.</p>
+        </aside>
+      </section>
+
       <section
         id="demo-bag"
         class="bag-section wrap"
         aria-labelledby="bag-title"
       >
         <div>
-          <p class="eyebrow">A small working interaction</p>
-          <h2 id="bag-title">Your demo bag.</h2>
+          <h2 id="bag-title" class="bag-title">
+            <svg
+              class="cart-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6"
+              />
+              <circle cx="10" cy="20" r="1.6" />
+              <circle cx="17" cy="20" r="1.6" />
+            </svg>
+            Your demo bag.
+          </h2>
         </div>
         <div class="bag-details">
           <p
@@ -167,30 +203,15 @@
           </p>
         </div>
       </section>
-
-      <section class="starter-next wrap" aria-labelledby="next-title">
-        <p class="eyebrow">For the person building this site</p>
-        <h2 id="next-title">The shirt stays.<br />The story is your work.</h2>
-        <div>
-          <p>
-            Choose who this is for, decide what the brand should express, and
-            make those choices visible. Keep the storefront and its
-            <a href="styleguide.html">live style guide</a> in sync.
-          </p>
-          <a class="button button-secondary" href="studio.html"
-            >See the studio brief <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer wrap">
       <p>
-        IS117 Brand Studio <span class="footer-separator"> / </span> Neutral
-        starter
+        Jersey Givers <span class="footer-separator"> / </span> IS117 class demo
       </p>
-      <p class="footer-tagline">Fictional product. Real design decisions.</p>
-      <a href="https://github.com/kaw393939/is117-brand-studio#readme"
+      <p class="footer-tagline">Pull it on, join the cause.</p>
+      <a
+        href="https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment#readme"
         >Project README <span aria-hidden="true">↗</span></a
       >
     </footer>
