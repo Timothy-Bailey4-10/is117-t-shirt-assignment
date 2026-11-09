@@ -6,10 +6,10 @@ This is the durable agreement between the learner and agent. Keep it concise and
 
 ## Current stage
 
-- Stage: Built, checked, and observed by learner; record review and PR next.
-- Current feature: `BRAND-001` — first branded storefront and live style guide.
-- Status: In progress on branch `brand-001-first-branded-storefront`; [issue #2](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/issues/2) holds the agreed scope.
-- Next small decision: Learner reviews LEARNING.md, then commit, PR, and merge decision.
+- Stage: `BRAND-001` kept and merged ([PR #3](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/pull/3)). Review 1 Research in progress.
+- Current work: [Review 1 Research](docs/assignments/review-1-research.md), recorded in [project-process.md](project-process.md).
+- Status: On branch `review-1-research`, due November 10, 2026.
+- Next small decision: Choose an audience position in project-process.md, then get real classmate feedback.
 
 ## Product boundary
 
@@ -82,9 +82,9 @@ Keep when:
 
 Write a short result and link only evidence that exists. A passing browser check is evidence for its assertions, not customer research or proof of full accessibility.
 
-| Spec ID   | Files                                                                                                                                                    | Issue / PR                                                                                     | Actual checks and observations                                                                                                                                                                                                                                                                                                                  |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BRAND-001 | public/index.html, styles.css, shop.js, styleguide.html, studio.html (fonts), assets/jersey-givers-logo*.svg, tests/browser/studio.spec.js, explorations | [Issue #2](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/issues/2); no PR yet | `npm run check` passed on 2026-11-03: format, lint, 7 server tests, 10 Chromium tests incl. axe on 3 pages (automated, not full accessibility proof). AI visual check at 1280px and 390px. Learner: first impression (hero sentence repetitive → rewritten), keyboard focus and arrow-key sizes worked, phone view "I don't see anything weird" |
+| Spec ID   | Files                                                                                                                                                    | Issue / PR                                                                                                                                                                    | Actual checks and observations                                                                                                                                                                                                                                                                                                                  |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BRAND-001 | public/index.html, styles.css, shop.js, styleguide.html, studio.html (fonts), assets/jersey-givers-logo*.svg, tests/browser/studio.spec.js, explorations | [Issue #2](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/issues/2); merged in [PR #3](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/pull/3) | `npm run check` passed on 2026-11-03: format, lint, 7 server tests, 10 Chromium tests incl. axe on 3 pages (automated, not full accessibility proof). AI visual check at 1280px and 390px. Learner: first impression (hero sentence repetitive → rewritten), keyboard focus and arrow-key sizes worked, phone view "I don't see anything weird" |
 
 ## Later
 

@@ -2,7 +2,7 @@
 
 AI-drafted task evidence, not a transcript or grade. This file may be public: review, correct or remove excerpts before commit/push. Use short actual quotes or labeled paraphrases and disclose help. Approval alone is not an explanation; leave missing evidence pending.
 
-- **Feature:** BRAND-001 — in progress
+- **Feature:** BRAND-001 — kept and merged
 - **Date:** 2026-10-28 to 2026-11-03
 - **Conversation context available:** This chat only, starting after issue creation; earlier conversation unavailable
 - **Review status:** Reviewed by learner on 2026-11-03 ("seems accurate")
@@ -19,6 +19,6 @@ AI-drafted task evidence, not a transcript or grade. This file may be public: re
 ## AI work and evidence links
 
 - **Work performed by AI:** Recorded agreed decisions in SPEC.md; drafted persona guesses, name/archetype options and the example line; researched two V&A references and built both hero previews and the learner's requested changes; generated the logo files; built the branded storefront, style guide, "size added" message and its test lines
-- **SPEC, issue/PR, actual checks and artifacts:** [SPEC.md](SPEC.md), [issue #2](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/issues/2); [hero comparison notes](docs/explorations/hero-comparison.md); [logo review](docs/explorations/logo-review.png); `npm run check` passed on 2026-11-03 (format, lint, 7 server tests, 10 Chromium tests incl. axe on 3 pages). No PR yet
+- **SPEC, issue/PR, actual checks and artifacts:** [SPEC.md](SPEC.md), [issue #2](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/issues/2); [hero comparison notes](docs/explorations/hero-comparison.md); [logo review](docs/explorations/logo-review.png); `npm run check` passed on 2026-11-03 (format, lint, 7 server tests, 10 Chromium tests incl. axe on 3 pages). Merged in [PR #3](https://github.com/Timothy-Bailey4-10/is117-t-shirt-assignment/pull/3)
 
-**Next step:** Learner reviews this record; commit, push, open PR, decide whether to merge
+**Next step:** None for BRAND-001. Review 1 Research continues in [project-process.md](project-process.md).
